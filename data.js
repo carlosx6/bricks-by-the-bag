@@ -63,7 +63,7 @@ This is a 4-story celebration of the Marvel Universe. Measuring over 32 in. (82 
     name: "LEGO® Hogwarts Express™ – Collectors’ Edition (76405)",
     theme: "Harry Potter",
     availability: "100+ Available",
-    price: 79.99,
+    price: 69.99,
     short: "Bring the magic of Harry Potter™ home with an all-new buildable, 1:32 scale replica of the Hogwarts Express™.",
     images: [
       "images/hogwarts-express.jpg",
@@ -411,4 +411,5 @@ This set includes 58 pieces.`,
     ]
   }
 ];
+
 
