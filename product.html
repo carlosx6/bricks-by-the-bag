@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Product – Bricks by the Bag</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header class="siteHeader">
+    <div class="leftHeader">
+      <button
+        id="menuBtn"
+        class="iconBtn"
+        type="button"
+        aria-label="Open menu"
+        aria-expanded="false"
+      >☰</button>
+
+      <a class="brandLink" href="index.html" aria-label="Bricks by the Bag home">
+        <div class="brand">
+          <div class="logoMark" aria-hidden="true">B</div>
+          <div class="brandText"><h1>Bricks by the Bag</h1></div>
+        </div>
+      </a>
+    </div>
+
+    <button id="cartBtn" class="pillBtn" type="button" aria-label="Open cart">
+      Cart <span class="cartPill">(<span id="cartCount">0</span>)</span>
+    </button>
+  </header>
+
+  <!-- Menu -->
+  <div id="menuBackdrop" class="backdrop hidden" aria-hidden="true"></div>
+  <aside id="menu" class="sideMenu" aria-label="Site menu">
+    <div class="menuTop">
+      <strong>Menu</strong>
+      <button id="closeMenu" class="ghostBtn" type="button">Close</button>
+    </div>
+
+    <nav class="menuLinks" aria-label="Main navigation">
+      <a href="index.html" class="menuLink">Products</a>
+      <a href="about.html" class="menuLink">About Us</a>
+      <a href="contact.html" class="menuLink">Contact</a>
+    </nav>
+  </aside>
+
+  <main class="container">
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <a href="index.html">Products</a>
+      <span class="muted">/</span>
+      <span id="crumbName" class="muted" aria-current="page">Product</span>
+    </nav>
+
+    <section
+      id="productPage"
+      class="productPage"
+      aria-label="Product page content"
+    ></section>
+  </main>
+
+  <!-- Cart -->
+  <div id="cartBackdrop" class="backdrop hidden" aria-hidden="true"></div>
+  <aside id="cart" class="cart" aria-label="Shopping cart">
+    <div class="cartHeader">
+      <h3>Your Cart</h3>
+      <div class="cartHeaderBtns">
+        <button id="clearCart" class="ghostBtn" type="button">Clear</button>
+        <button id="closeCart" class="ghostBtn" type="button">Close</button>
+      </div>
+    </div>
+
+    <!-- Removed "muted" so the free shipping progress bar doesn't look faded -->
+    <div id="cartItems"></div>
+
+    <p id="cartTotal" class="cartTotal"></p>
+
+    <a
+      id="cartCheckoutBtn"
+      href="checkout.html"
+      class="primaryBtn checkoutLinkBtn hidden"
+    >
+      Checkout
+    </a>
+  </aside>
+
+  <div id="toast" class="toast hidden" role="status" aria-live="polite"></div>
+
+  <!-- Footer LAST -->
+  <div id="siteFooter"></div>
+
+  <script src="data.js"></script>
+  <script src="store.js"></script>
+  <script src="includes.js"></script>
+</body>
+</html>

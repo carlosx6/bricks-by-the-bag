@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Checkout – Bricks by the Bag</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header class="siteHeader">
+    <div class="leftHeader">
+      <button
+        id="menuBtn"
+        class="iconBtn"
+        type="button"
+        aria-label="Open menu"
+        aria-expanded="false"
+      >☰</button>
+
+      <a class="brandLink" href="index.html" aria-label="Bricks by the Bag home">
+        <div class="brand">
+          <div class="logoMark" aria-hidden="true">B</div>
+          <div class="brandText"><h1>Bricks by the Bag</h1></div>
+        </div>
+      </a>
+    </div>
+
+    <button id="cartBtn" class="pillBtn" type="button" aria-label="Open cart">
+      Cart <span class="cartPill">(<span id="cartCount">0</span>)</span>
+    </button>
+  </header>
+
+  <!-- Menu -->
+  <div id="menuBackdrop" class="backdrop hidden" aria-hidden="true"></div>
+  <aside id="menu" class="sideMenu" aria-label="Site menu">
+    <div class="menuTop">
+      <strong>Menu</strong>
+      <button id="closeMenu" class="ghostBtn" type="button">Close</button>
+    </div>
+
+    <nav class="menuLinks" aria-label="Main navigation">
+      <a href="index.html" class="menuLink">Products</a>
+      <a href="about.html" class="menuLink">About Us</a>
+      <a href="contact.html" class="menuLink">Contact</a>
+    </nav>
+  </aside>
+
+  <main class="container">
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <a href="index.html">Products</a>
+      <span class="muted">/</span>
+      <span class="muted" aria-current="page">Checkout</span>
+    </nav>
+
+    <section class="checkoutHeaderCard" aria-label="Checkout header">
+      <div>
+        <h2 class="checkoutTitle">Secure Checkout</h2>
+        <div class="muted checkoutSub">
+          Encrypted form • Shipping options • Email receipt
+        </div>
+      </div>
+
+      <div class="stepPills" aria-label="Checkout steps">
+        <span class="stepPill active">Shipping</span>
+        <span class="stepPill">Payment</span>
+        <span class="stepPill">Review</span>
+      </div>
+    </section>
+
+    <section class="checkout">
+      <!-- LEFT -->
+      <div class="checkoutLeft">
+        <form id="checkoutForm" class="pageCard" autocomplete="on">
+          <div class="rowBetween">
+            <h3 class="sectionTitle">Shipping Address</h3>
+            <div class="secureBadge" aria-label="Secure checkout">
+              <span class="lock" aria-hidden="true">🔒</span> Secure
+            </div>
+          </div>
+
+          <div class="formGrid">
+            <div class="field">
+              <label for="fullName">Full name</label>
+              <input id="fullName" name="fullName" autocomplete="name" placeholder="Full name" required />
+            </div>
+
+            <div class="field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" autocomplete="email" placeholder="you@email.com" required />
+            </div>
+
+            <div class="field">
+              <label for="address1">Address</label>
+              <input id="address1" name="address1" autocomplete="shipping street-address" placeholder="Street address" required />
+            </div>
+
+            <div class="field">
+              <label for="address2">Apt / Suite</label>
+              <input id="address2" name="address2" autocomplete="shipping address-line2" placeholder="Optional" />
+            </div>
+
+            <div class="field">
+              <label for="city">City</label>
+              <input id="city" name="city" autocomplete="shipping address-level2" placeholder="City" required />
+            </div>
+
+            <div class="field">
+              <label for="state">State</label>
+              <input id="state" name="state" autocomplete="shipping address-level1" placeholder="State" required />
+            </div>
+
+            <div class="field">
+              <label for="zip">ZIP</label>
+              <input id="zip" name="zip" inputmode="numeric" autocomplete="shipping postal-code" placeholder="ZIP" required />
+            </div>
+
+            <div class="field">
+              <label for="country">Country</label>
+              <select id="country" name="country" autocomplete="shipping country" required>
+                <option value="US">United States</option>
+                <option value="CA">Canada</option>
+                <option value="MX">Mexico</option>
+                <option value="UK">United Kingdom</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="phone">Phone</label>
+              <input id="phone" name="phone" inputmode="tel" autocomplete="tel" placeholder="Phone" required />
+            </div>
+          </div>
+
+          <h3 class="sectionTitle sectionGap">Shipping Method</h3>
+          <div class="radioGroup" role="radiogroup" aria-label="Shipping method">
+            <label class="radioCard">
+              <input type="radio" name="shipMethod" value="standard" checked />
+              <div>
+                <div class="radioTitle">Standard</div>
+                <div class="muted">3–6 business days</div>
+              </div>
+              <div class="priceRight" id="shipStandardPrice">$0.00</div>
+            </label>
+
+            <label class="radioCard">
+              <input type="radio" name="shipMethod" value="express" />
+              <div>
+                <div class="radioTitle">Express</div>
+                <div class="muted">1–2 business days</div>
+              </div>
+              <div class="priceRight" id="shipExpressPrice">$0.00</div>
+            </label>
+          </div>
+
+          <h3 class="sectionTitle sectionGap">Payment</h3>
+          <div class="radioGroup" role="radiogroup" aria-label="Payment method">
+            <label class="radioCard">
+              <input type="radio" name="payMethod" value="card" checked />
+              <div>
+                <div class="radioTitle">Card</div>
+                <div class="muted">Credit / debit</div>
+              </div>
+            </label>
+
+            <label class="radioCard">
+              <input type="radio" name="payMethod" value="paypal" />
+              <div>
+                <div class="radioTitle">PayPal</div>
+                <div class="muted">Pay with PayPal</div>
+              </div>
+            </label>
+          </div>
+
+          <div id="cardFields" class="formGrid sectionGap">
+            <div class="field">
+              <label for="cardNumber">Card number</label>
+              <input
+                id="cardNumber"
+                name="cardNumber"
+                inputmode="numeric"
+                autocomplete="cc-number"
+                placeholder="1234 5678 9012 3456"
+                required
+              />
+            </div>
+
+            <div class="field">
+              <label for="cardName">Name on card</label>
+              <input id="cardName" name="cardName" autocomplete="cc-name" placeholder="Name on card" required />
+            </div>
+
+            <div class="field">
+              <label for="cardExp">Expiry</label>
+              <input id="cardExp" name="cardExp" inputmode="numeric" autocomplete="cc-exp" placeholder="MM/YY" required />
+            </div>
+
+            <div class="field">
+              <label for="cardCvv">CVV</label>
+              <input id="cardCvv" name="cardCvv" inputmode="numeric" autocomplete="cc-csc" placeholder="123" required />
+            </div>
+          </div>
+
+          <div id="paypalFields" class="miniCard hidden sectionGap">
+            <div class="radioTitle">PayPal selected</div>
+            <div class="muted paypalNote">
+              You’ll confirm payment in PayPal on the next step.
+            </div>
+          </div>
+
+          <label class="termsRow sectionGap">
+            <input id="terms" type="checkbox" required />
+            <span class="muted">
+              I agree to the
+              <a href="terms.html">Terms</a>
+              &amp;
+              <a href="privacy.html">Privacy Policy</a>.
+            </span>
+          </label>
+
+          <button type="submit" class="primaryBtn checkoutBtn">
+            Place Order
+          </button>
+
+          <div id="checkoutMsg" class="muted checkoutMsg"></div>
+        </form>
+
+        <section id="confirmation" class="pageCard hidden" aria-live="polite">
+          <h3>Order Confirmed</h3>
+          <div class="muted confirmText">
+            Confirmation #: <strong id="orderNumber"></strong><br />
+            Receipt sent to: <strong id="orderEmail"></strong>
+          </div>
+
+          <a href="index.html" class="primaryBtn confirmBtn">
+            Back to Products
+          </a>
+        </section>
+      </div>
+
+      <!-- RIGHT -->
+      <aside class="checkoutRight">
+        <div class="pageCard">
+          <h3>Order Summary</h3>
+          <div id="summaryItems" class="muted summaryLoading">Loading…</div>
+
+          <div class="sumLine"><span>Subtotal</span><span id="sumSubtotal">$0.00</span></div>
+          <div class="sumLine"><span>Shipping</span><span id="sumShipping">$0.00</span></div>
+          <div class="sumLine"><span>Estimated tax</span><span id="sumTax">$0.00</span></div>
+          <div class="sumLine total"><span>Total</span><span id="sumTotal">$0.00</span></div>
+
+          <div class="muted summaryHelp">
+            Need changes? Open your cart and update quantities.
+          </div>
+        </div>
+      </aside>
+    </section>
+  </main>
+
+  <!-- Cart -->
+  <div id="cartBackdrop" class="backdrop hidden" aria-hidden="true"></div>
+  <aside id="cart" class="cart" aria-label="Shopping cart">
+    <div class="cartHeader">
+      <h3>Your Cart</h3>
+      <div class="cartHeaderBtns">
+        <button id="clearCart" class="ghostBtn" type="button">Clear</button>
+        <button id="closeCart" class="ghostBtn" type="button">Close</button>
+      </div>
+    </div>
+
+    <div id="cartItems" class="muted">Cart is empty.</div>
+    <p id="cartTotal" class="cartTotal"></p>
+  </aside>
+
+  <div id="toast" class="toast hidden" role="status" aria-live="polite"></div>
+
+  <!-- Footer LAST -->
+  <div id="siteFooter"></div>
+
+  <script src="data.js"></script>
+  <script src="store.js"></script>
+  <script src="includes.js"></script>
+</body>
+</html>

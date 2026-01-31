@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Shipping & Returns – Bricks by the Bag</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header class="siteHeader">
+    <div class="leftHeader">
+      <button id="menuBtn" class="iconBtn" type="button" aria-label="Open menu" aria-expanded="false">☰</button>
+
+      <a class="brandLink" href="index.html" aria-label="Bricks by the Bag home">
+        <div class="brand">
+          <div class="logoMark">B</div>
+          <div class="brandText"><h1>Bricks by the Bag</h1></div>
+        </div>
+      </a>
+    </div>
+
+    <button id="cartBtn" class="pillBtn" type="button">
+      Cart <span class="cartPill">(<span id="cartCount">0</span>)</span>
+    </button>
+  </header>
+
+  <!-- Menu -->
+  <div id="menuBackdrop" class="backdrop hidden"></div>
+  <aside id="menu" class="sideMenu" aria-label="Site menu">
+    <div class="menuTop">
+      <strong>Menu</strong>
+      <button id="closeMenu" class="ghostBtn" type="button">Close</button>
+    </div>
+
+    <nav class="menuLinks">
+      <a href="index.html" class="menuLink">Products</a>
+      <a href="about.html" class="menuLink">About Us</a>
+      <a href="contact.html" class="menuLink">Contact</a>
+    </nav>
+  </aside>
+
+  <main class="container">
+    <nav class="crumbs">
+      <a href="index.html">Products</a>
+      <span class="muted">/</span>
+      <span class="muted">Shipping & Returns</span>
+    </nav>
+
+    <section class="pageCard">
+      <h2 style="margin:0;">Shipping & Returns</h2>
+      <p class="muted" style="margin-top:8px; line-height:1.6;">
+        We keep it simple: fast shipping, careful packing, and an easy return window.
+      </p>
+
+      <hr class="rule" />
+
+      <h3 style="margin:0;">Shipping</h3>
+      <div class="miniCard" style="margin-top:10px;">
+        <div class="rowBetween">
+          <div>
+            <div style="font-weight:900;">Standard</div>
+            <div class="muted">3–6 business days</div>
+          </div>
+          <div style="font-weight:900;">$14.99 (Free $200+)</div>
+        </div>
+      </div>
+
+      <div class="miniCard" style="margin-top:10px;">
+        <div class="rowBetween">
+          <div>
+            <div style="font-weight:900;">Express</div>
+            <div class="muted">1–2 business days</div>
+          </div>
+          <div style="font-weight:900;">$29.99</div>
+        </div>
+      </div>
+
+      <p class="muted" style="margin-top:12px; line-height:1.6;">
+        Orders are typically processed within 1–2 business days. Delivery times are estimates and can vary by location.
+      </p>
+
+      <hr class="rule" />
+
+      <h3 style="margin:0;">Returns</h3>
+      <p class="muted" style="margin-top:8px; line-height:1.6;">
+        We accept returns within <strong>30 days</strong> of delivery as long as items are returned in the same condition.
+      </p>
+
+      <div class="miniCard" style="margin-top:10px;">
+        <ul style="margin:0; padding-left:18px; line-height:1.7;">
+          <li><strong>Return window:</strong> 30 days from delivery</li>
+          <li><strong>Condition:</strong> Unused, complete, original packaging</li>
+          <li><strong>Refunds:</strong> Issued after inspection</li>
+          <li><strong>Shipping fees:</strong> Non-refundable unless damaged/incorrect</li>
+        </ul>
+      </div>
+
+      <p class="muted" style="margin-top:12px; line-height:1.6;">
+        To start a return, use our <a href="contact.html" class="fullLink">Contact</a> page with your order details.
+      </p>
+    </section>
+  </main>
+
+  <!-- Cart -->
+  <div id="cartBackdrop" class="backdrop hidden"></div>
+  <aside id="cart" class="cart" aria-label="Shopping cart">
+    <div class="cartHeader">
+      <h3>Your Cart</h3>
+      <div class="cartHeaderBtns">
+        <button id="clearCart" class="ghostBtn" type="button">Clear</button>
+        <button id="closeCart" class="ghostBtn" type="button">Close</button>
+      </div>
+    </div>
+
+    <div id="cartItems" class="muted">Cart is empty.</div>
+    <p id="cartTotal" class="cartTotal"></p>
+
+    <a id="cartCheckoutBtn" href="checkout.html" class="primaryBtn checkoutLinkBtn hidden">Checkout</a>
+  </aside>
+
+  <div id="toast" class="toast hidden" role="status" aria-live="polite"></div>
+
+  <!-- Footer LAST -->
+  <div id="siteFooter"></div>
+
+  <script src="data.js"></script>
+  <script src="store.js"></script>
+  <script src="includes.js"></script>
+</body>
+</html>

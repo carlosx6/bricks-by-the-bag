@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Privacy Policy – Bricks by the Bag</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header class="siteHeader">
+    <div class="leftHeader">
+      <button id="menuBtn" class="iconBtn" type="button" aria-label="Open menu" aria-expanded="false">☰</button>
+
+      <a class="brandLink" href="index.html" aria-label="Bricks by the Bag home">
+        <div class="brand">
+          <div class="logoMark">B</div>
+          <div class="brandText"><h1>Bricks by the Bag</h1></div>
+        </div>
+      </a>
+    </div>
+
+    <button id="cartBtn" class="pillBtn" type="button">
+      Cart <span class="cartPill">(<span id="cartCount">0</span>)</span>
+    </button>
+  </header>
+
+  <!-- Menu -->
+  <div id="menuBackdrop" class="backdrop hidden"></div>
+  <aside id="menu" class="sideMenu" aria-label="Site menu">
+    <div class="menuTop">
+      <strong>Menu</strong>
+      <button id="closeMenu" class="ghostBtn" type="button">Close</button>
+    </div>
+
+    <nav class="menuLinks">
+      <a href="index.html" class="menuLink">Products</a>
+      <a href="about.html" class="menuLink">About Us</a>
+      <a href="contact.html" class="menuLink">Contact</a>
+    </nav>
+  </aside>
+
+  <main class="container">
+    <nav class="crumbs">
+      <a href="index.html">Products</a>
+      <span class="muted">/</span>
+      <span class="muted">Privacy Policy</span>
+    </nav>
+
+    <section class="pageCard">
+      <h2 style="margin:0;">Privacy Policy</h2>
+      <p class="muted" style="margin-top:8px; line-height:1.6;">
+        This is a simple policy for a small store site. We only use your info to process orders and provide support.
+      </p>
+
+      <hr class="rule" />
+
+      <h3 style="margin:0;">Information We Collect</h3>
+      <div class="miniCard" style="margin-top:10px;">
+        <ul style="margin:0; padding-left:18px; line-height:1.7;">
+          <li>Contact info (name, email, phone)</li>
+          <li>Shipping info (address)</li>
+          <li>Order details (items, quantities, totals)</li>
+        </ul>
+      </div>
+
+      <p class="muted" style="margin-top:12px; line-height:1.6;">
+        We do not intentionally collect sensitive personal information.
+      </p>
+
+      <hr class="rule" />
+
+      <h3 style="margin:0;">How We Use Information</h3>
+      <div class="miniCard" style="margin-top:10px;">
+        <ul style="margin:0; padding-left:18px; line-height:1.7;">
+          <li>To process and ship orders</li>
+          <li>To send order confirmations/receipts</li>
+          <li>To provide customer support</li>
+          <li>To improve site experience</li>
+        </ul>
+      </div>
+
+      <hr class="rule" />
+
+      <h3 style="margin:0;">Cookies / Local Storage</h3>
+      <p class="muted" style="margin-top:8px; line-height:1.6;">
+        This site may use browser storage (like <strong>localStorage</strong>) to save your cart so it stays between visits.
+        We don’t use it to track you across other sites.
+      </p>
+
+      <hr class="rule" />
+
+      <h3 style="margin:0;">Sharing</h3>
+      <p class="muted" style="margin-top:8px; line-height:1.6;">
+        We don’t sell your personal information. We only share what’s necessary to fulfill your order
+        (for example, shipping carriers).
+      </p>
+
+      <hr class="rule" />
+
+      <h3 style="margin:0;">Contact</h3>
+      <p class="muted" style="margin-top:8px; line-height:1.6;">
+        Questions? Use our <a href="contact.html" class="fullLink">Contact</a> page.
+      </p>
+
+      <div class="muted" style="margin-top:12px;">
+        Last updated: 2026
+      </div>
+    </section>
+  </main>
+
+  <!-- Cart -->
+  <div id="cartBackdrop" class="backdrop hidden"></div>
+  <aside id="cart" class="cart" aria-label="Shopping cart">
+    <div class="cartHeader">
+      <h3>Your Cart</h3>
+      <div class="cartHeaderBtns">
+        <button id="clearCart" class="ghostBtn" type="button">Clear</button>
+        <button id="closeCart" class="ghostBtn" type="button">Close</button>
+      </div>
+    </div>
+
+    <div id="cartItems" class="muted">Cart is empty.</div>
+    <p id="cartTotal" class="cartTotal"></p>
+
+    <a id="cartCheckoutBtn" href="checkout.html" class="primaryBtn checkoutLinkBtn hidden">Checkout</a>
+  </aside>
+
+  <div id="toast" class="toast hidden" role="status" aria-live="polite"></div>
+
+  <!-- Footer LAST -->
+  <div id="siteFooter"></div>
+
+  <script src="data.js"></script>
+  <script src="store.js"></script>
+  <script src="includes.js"></script>
+</body>
+</html>

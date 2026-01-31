@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Bricks by the Bag</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header class="siteHeader">
+    <div class="leftHeader">
+      <button
+        id="menuBtn"
+        class="iconBtn"
+        type="button"
+        aria-label="Open menu"
+        aria-expanded="false"
+      >☰</button>
+
+      <a class="brandLink" href="index.html" aria-label="Bricks by the Bag home">
+        <div class="brand">
+          <div class="logoMark" aria-hidden="true">B</div>
+          <div class="brandText">
+            <h1>Bricks by the Bag</h1>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <button id="cartBtn" class="pillBtn" type="button" aria-label="Open cart">
+      Cart <span class="cartPill">(<span id="cartCount">0</span>)</span>
+    </button>
+  </header>
+
+  <!-- Menu -->
+  <div id="menuBackdrop" class="backdrop hidden" aria-hidden="true"></div>
+  <aside id="menu" class="sideMenu" aria-label="Site menu">
+    <div class="menuTop">
+      <strong>Menu</strong>
+      <button id="closeMenu" class="ghostBtn" type="button">Close</button>
+    </div>
+
+    <nav class="menuLinks" aria-label="Main navigation">
+      <a href="index.html" class="menuLink">Products</a>
+      <a href="about.html" class="menuLink">About Us</a>
+      <a href="contact.html" class="menuLink">Contact</a>
+    </nav>
+  </aside>
+
+  <main class="container">
+    <section class="hero heroPro">
+      <div class="heroText">
+        <h2>Bricks. Sets. Legends.</h2>
+        <p>
+          Explore featured builds, open a full product view, swipe through images,
+          read reviews, and add items to your cart.
+        </p>
+
+        <div class="heroBadges" aria-label="Store highlights">
+          <span class="chip">Free shipping $200+</span>
+          <span class="chip">Secure checkout</span>
+          <span class="chip">Collector-friendly</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="productGrid" class="grid" aria-label="Product list"></section>
+  </main>
+
+  <!-- Cart -->
+  <div id="cartBackdrop" class="backdrop hidden" aria-hidden="true"></div>
+  <aside id="cart" class="cart" aria-label="Shopping cart">
+    <div class="cartHeader">
+      <h3>Your Cart</h3>
+      <div class="cartHeaderBtns">
+        <button id="clearCart" class="ghostBtn" type="button">Clear</button>
+        <button id="closeCart" class="ghostBtn" type="button">Close</button>
+      </div>
+    </div>
+
+    <!-- Removed "muted" so free-ship progress + cart rows look normal -->
+    <div id="cartItems"></div>
+
+    <p id="cartTotal" class="cartTotal"></p>
+
+    <a
+      id="cartCheckoutBtn"
+      href="checkout.html"
+      class="primaryBtn checkoutLinkBtn hidden"
+    >
+      Checkout
+    </a>
+  </aside>
+
+  <!-- Quick View Modal -->
+  <div id="modalBackdrop" class="backdrop hidden" aria-hidden="true"></div>
+
+  <section id="productModal" class="modal hidden" aria-hidden="true">
+    <div class="modalTop">
+      <h2 id="modalTitle">Product</h2>
+      <button
+        id="modalClose"
+        class="ghostBtn"
+        type="button"
+        aria-label="Close modal"
+      >✕</button>
+    </div>
+
+    <div class="modalBody">
+      <div class="gallery">
+        <div class="heroWrap">
+          <button class="navBtn" id="prevImg" type="button" aria-label="Previous image">‹</button>
+          <img id="modalHero" alt="Product image" />
+          <button class="navBtn" id="nextImg" type="button" aria-label="Next image">›</button>
+        </div>
+        <div id="thumbs" class="thumbs"></div>
+      </div>
+
+      <div class="info">
+        <div class="priceRow">
+          <div class="modalPrice" id="modalPrice">$0.00</div>
+          <button id="modalAddBtn" class="primaryBtn" type="button">Add to cart</button>
+        </div>
+
+        <div class="tabs" role="tablist" aria-label="Product tabs">
+          <button class="tab active" data-tab="desc" type="button" role="tab">Description</button>
+          <button class="tab" data-tab="details" type="button" role="tab">Details</button>
+          <button class="tab" data-tab="reviews" type="button" role="tab">Reviews</button>
+        </div>
+
+        <div class="tabPanel" id="tab-desc"></div>
+        <div class="tabPanel hidden" id="tab-details"></div>
+        <div class="tabPanel hidden" id="tab-reviews"></div>
+
+        <a id="modalFullLink" class="fullLink" href="product.html?id=1">View full details →</a>
+      </div>
+    </div>
+  </section>
+
+  <div id="toast" class="toast hidden" role="status" aria-live="polite"></div>
+
+  <!-- Footer LAST -->
+  <div id="siteFooter"></div>
+
+  <script src="data.js"></script>
+  <script src="store.js"></script>
+  <script src="includes.js"></script>
+</body>
+</html>

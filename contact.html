@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Contact – Bricks by the Bag</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header class="siteHeader">
+    <div class="leftHeader">
+      <button id="menuBtn" class="iconBtn" type="button" aria-label="Open menu" aria-expanded="false">☰</button>
+
+      <a class="brandLink" href="index.html" aria-label="Bricks by the Bag home">
+        <div class="brand">
+          <div class="logoMark">B</div>
+          <div class="brandText"><h1>Bricks by the Bag</h1></div>
+        </div>
+      </a>
+    </div>
+
+    <button id="cartBtn" class="pillBtn" type="button">
+      Cart <span class="cartPill">(<span id="cartCount">0</span>)</span>
+    </button>
+  </header>
+
+  <!-- Menu -->
+  <div id="menuBackdrop" class="backdrop hidden"></div>
+  <aside id="menu" class="sideMenu" aria-label="Site menu">
+    <div class="menuTop">
+      <strong>Menu</strong>
+      <button id="closeMenu" class="ghostBtn" type="button">Close</button>
+    </div>
+
+    <nav class="menuLinks">
+      <a href="index.html" class="menuLink">Products</a>
+      <a href="about.html" class="menuLink">About Us</a>
+      <a href="contact.html" class="menuLink">Contact</a>
+    </nav>
+  </aside>
+
+  <main class="container">
+    <nav class="crumbs">
+      <a href="index.html">Products</a>
+      <span class="muted">/</span>
+      <span class="muted">Contact</span>
+    </nav>
+
+    <section class="pageCard">
+      <h2 style="margin:0;">Contact</h2>
+      <p class="muted" style="margin-top:10px; line-height:1.6;">
+        Questions about shipping, sets, or an order? Send us a message and we’ll reply within 1–2 business days.
+      </p>
+
+      <form class="miniCard" style="margin-top:14px;" onsubmit="return false;">
+        <div class="formGrid" style="margin-top:0;">
+          <div class="field">
+            <label for="cName">Name</label>
+            <input id="cName" autocomplete="name" placeholder="Your name" required />
+          </div>
+
+          <div class="field">
+            <label for="cEmail">Email</label>
+            <input id="cEmail" type="email" autocomplete="email" placeholder="you@email.com" required />
+          </div>
+
+          <div class="field" style="grid-column: 1 / -1;">
+            <label for="cMsg">Message</label>
+            <textarea id="cMsg" rows="5" placeholder="How can we help?" required style="resize:vertical;"></textarea>
+          </div>
+        </div>
+
+        <button class="primaryBtn" type="button" style="width:100%; margin-top:12px;">
+          Send
+        </button>
+
+        <div class="muted" style="margin-top:10px;">
+          Support hours: Mon–Fri, 9am–5pm (ET)
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <!-- Cart -->
+  <div id="cartBackdrop" class="backdrop hidden"></div>
+  <aside id="cart" class="cart" aria-label="Shopping cart">
+    <div class="cartHeader">
+      <h3>Your Cart</h3>
+      <div class="cartHeaderBtns">
+        <button id="clearCart" class="ghostBtn" type="button">Clear</button>
+        <button id="closeCart" class="ghostBtn" type="button">Close</button>
+      </div>
+    </div>
+
+    <div id="cartItems" class="muted">Cart is empty.</div>
+    <p id="cartTotal" class="cartTotal"></p>
+
+    <a id="cartCheckoutBtn" href="checkout.html" class="primaryBtn checkoutLinkBtn hidden">
+      Checkout
+    </a>
+  </aside>
+
+  <div id="toast" class="toast hidden" role="status" aria-live="polite"></div>
+
+  <!-- Footer LAST -->
+  <div id="siteFooter"></div>
+
+  <script src="data.js"></script>
+  <script src="store.js"></script>
+  <script src="includes.js"></script>
+</body>
+</html>
