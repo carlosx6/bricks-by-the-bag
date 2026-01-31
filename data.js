@@ -70,7 +70,9 @@ This is a 4-story celebration of the Marvel Universe. Measuring over 32 in. (82 
       "images/hogwarts-express-2.jpg",
       "images/hogwarts-express-3.jpg"
     ],
-    description: `Capture the magic of the Harry Potter™ stories with a buildable, 1:32 scale replica of the most iconic vehicle in the Wizarding World. LEGO® Harry Potter Hogwarts Express™ Collectors' Edition (76405) is a spectacular build-and-display project for adult Harry Potter enthusiasts, which will enchant all who see it.
+   description: `Capture the magic of the Harry Potter™ stories with a buildable, 1:32 scale replica of the most iconic vehicle in the Wizarding World. LEGO® Harry Potter Hogwarts Express™ Collectors' Edition (76405) is a spectacular build-and-display project for adult Harry Potter enthusiasts, which will enchant all who see it.
+
+An enchanting conversation piece – measuring over 10.5 in. (26 cm) high, 46.5 in. (118 cm) long and 8 in. (20 cm) wide, the model will draw admiring comments wherever it is displayed.
 
 Inside and out, the model is packed with authentic details. The engine features a detailed underside and a lever on the top that causes the train to rock with the motion of a steam train.`,
     details: [
