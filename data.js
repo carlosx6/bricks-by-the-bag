@@ -76,6 +76,7 @@ An enchanting conversation piece measuring over 10.5 in. (26 cm) high, 46.5 in. 
 
 Inside and out, the model is packed with authentic details. The engine features a detailed underside and a lever on the top that causes the train to rock with the motion of a steam train.`,
     details: [
+      "Brand: Lego",
       "Theme: Harry Potter",
       "Set: 76405 (Collectors’ Edition)",
       "5129 pcs",
@@ -411,6 +412,7 @@ This set includes 58 pieces.`,
     ]
   }
 ];
+
 
 
 
